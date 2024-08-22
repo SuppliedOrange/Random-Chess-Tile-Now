@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Random Chess Tile Now",
+    "version": "1.2",
+    "description": "Gives you a random tile on chess.com or on the extension. That's it.",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": ["tabs", "scripting", "activeTab"],
+    "host_permissions": ["https://chess.com/*"],
+    "icons": {
+      "128": "./images/icon.png"
+    }
+}

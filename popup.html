@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <title>Random Chess Tile Now</title>
+
+        <!-- local files -->
+        <script src="buttonInjector.js"></script>
+        <script src="popup.js"></script>
+        <link rel="stylesheet" href="./popup.css">
+
+    </head>
+
+    <body>
+
+    <div id="mainPanel" style="display: flex; flex-direction: column;">
+
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+
+            <div class="coin-container">
+                <img class="coin-image" src="./images/pawn.png" alt="coin">
+            </div>
+            
+            <h1>Random<br>Chess<br>Tile<br>Now</h1>
+        </div>
+
+        <hr>
+
+        <button class="menu-button" id="loadIntoChessComButton">Load into current chess.com game</button>
+        <br>
+        <button class="menu-button" id="loadRandomizerPanelButton">Open randomizer here</button>
+
+    </div>
+
+    <div id="randomizerPanel" style="display: flex; flex-direction: column; display: none">
+
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+
+            <button id="newTileButton" class="circular-button">
+                <img src="./images/osaka.png" width="60rem">
+            </button>
+
+            <div style="padding: 1rem 1rem;"></div>
+            <h1>Press<br>For<br>New<br>Tile</h1>
+
+        </div>
+
+        <hr>
+
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; padding-top: 1rem;">
+            <div style="display: flex; flex-direction: column; text-align: center;">
+                <div style="font-size: 2rem">Your tile is</div>
+                <div id="randomTile" style="font-size: 5rem; font-style: bold; color: maroon;">:D</div>
+            </div>
+        </div>
+
+    </div>
+
+    </body>
+
+</html>

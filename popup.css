@@ -1,0 +1,82 @@
+body {
+
+    font-family: 'Manrope', sans-serif;
+    min-width: 23rem;
+    min-height: 18rem;
+
+}
+
+hr {
+    display: block;
+    height: 0.5rem;
+    border: 0;
+    border-top: 0.5rem solid white;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.menu-button {
+
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    color: #1d0500;
+    border: none;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+    border: 1rem;
+    outline-style: solid;
+    outline-color:black
+
+}
+
+.menu-button:hover {
+    background-color: #1d0500;
+    color: white;
+}
+
+.circular-button {
+    background-color: #1d0500;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 31px;
+    height: 130px;
+    width: 130px;
+    box-shadow: 0 2px 4px darkslategray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.coin-container {
+    width: 8rem;
+    height: 8rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow: hidden;
+    position: relative;
+    animation: flip 10s infinite;
+}
+
+.coin-image {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(90deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(90deg);
+    }
+}
