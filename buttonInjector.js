@@ -96,6 +96,7 @@ async function executeButtonInjection() {
             
                 const botGamePanel = document.querySelector(".game-controls-controller-component");
                 const liveGamePanel = document.querySelector(".tab-content-component");
+                const fourPlayerGamePanel = document.querySelector(".board-panel-content-wrapper");
             
                 if (liveGamePanel) {
                     return injectIntoPanel( liveGamePanel,
@@ -114,6 +115,17 @@ async function executeButtonInjection() {
                         [
                             generateHorizontalDivider(),
                             generateRandomizerElement()
+                        ]
+                    )
+                }
+
+                else if (fourPlayerGamePanel) {
+                    return injectIntoPanel( fourPlayerGamePanel,
+                        "game-panel-btns-container",
+                        [
+                            generateHorizontalDivider(),
+                            generateRandomizerElement(),
+                            generateHorizontalDivider()  
                         ]
                     )
                 }
