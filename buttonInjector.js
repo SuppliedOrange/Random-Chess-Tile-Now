@@ -203,6 +203,7 @@ async function executeButtonInjection() {
             }
             else if (injectResult.type == "SUCCESS") {
                 loadIntoChessComButton.innerText = "Successfully loaded."
+                console.log(`Random Chess Tile Now: ${injectResult.reason}`);
             }
             else if (injectResult.type == "NO_PANEL") {
                 loadIntoChessComButton.innerText = "Unable to find panel to inject self into. You must be in a game."

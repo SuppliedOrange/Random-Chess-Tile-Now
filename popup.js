@@ -32,14 +32,20 @@ function tryLoadIntoChessCom() {
             await new Promise(r => setTimeout(r, 4000));
             loadIntoChessComButton.innerText = "Load into current chess.com game"
             return;
-        };
+        };      
 
         try { await executeButtonInjection(); }
 
-        catch (e) {
+        catch (error) {
 
             loadIntoChessComButton.innerText = "Fatal error. Check console for info."
-            console.error(e);
+            chrome.scripting.executeScript({
+                target: {tabId: tabs[0].id}, 
+                func: ( (error) => console.error(error) ),
+                args: [ error.toString() ]
+            });
+            
+            console.error(error);
             await new Promise(r => setTimeout(r, 4000));
             loadIntoChessComButton.innerText = "Load into current chess.com game"
 
